@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assembleia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Distrito</th>
+      <th>Municipio</th>
+      <th>Nome presidente</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Aderiu</th>
+      <th>Data</th>
+      <th>Votacao</th>
+      <th>Observacoes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assembleia.each do |assembleium| %>
+      <tr>
+        <td><%= assembleium.Distrito %></td>
+        <td><%= assembleium.Municipio %></td>
+        <td><%= assembleium.nome_presidente %></td>
+        <td><%= assembleium.email %></td>
+        <td><%= assembleium.telefone %></td>
+        <td><%= assembleium.aderiu %></td>
+        <td><%= assembleium.data %></td>
+        <td><%= assembleium.votacao %></td>
+        <td><%= assembleium.observacoes %></td>
+        <td><%= link_to 'Show', assembleium %></td>
+        <td><%= link_to 'Edit', edit_assembleium_path(assembleium) %></td>
+        <td><%= link_to 'Destroy', assembleium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assembleium', new_assembleium_path %>

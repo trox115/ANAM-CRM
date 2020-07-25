@@ -1,0 +1,2 @@
+class Assembleium < ApplicationRecord
+end

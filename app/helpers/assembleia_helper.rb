@@ -1,0 +1,2 @@
+module AssembleiaHelper
+end

@@ -1,0 +1,62 @@
+<%= form_with(model: assembleium, local: true) do |form| %>
+  <% if assembleium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assembleium.errors.count, "error") %> prohibited this assembleium from being saved:</h2>
+
+      <ul>
+        <% assembleium.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Distrito %>
+    <%= form.text_field :Distrito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Municipio %>
+    <%= form.text_field :Municipio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_presidente %>
+    <%= form.text_field :nome_presidente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aderiu %>
+    <%= form.check_box :aderiu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :votacao %>
+    <%= form.text_field :votacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observacoes %>
+    <%= form.text_field :observacoes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

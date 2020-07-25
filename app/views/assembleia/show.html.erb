@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distrito:</strong>
+  <%= @assembleium.Distrito %>
+</p>
+
+<p>
+  <strong>Municipio:</strong>
+  <%= @assembleium.Municipio %>
+</p>
+
+<p>
+  <strong>Nome presidente:</strong>
+  <%= @assembleium.nome_presidente %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @assembleium.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @assembleium.telefone %>
+</p>
+
+<p>
+  <strong>Aderiu:</strong>
+  <%= @assembleium.aderiu %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @assembleium.data %>
+</p>
+
+<p>
+  <strong>Votacao:</strong>
+  <%= @assembleium.votacao %>
+</p>
+
+<p>
+  <strong>Observacoes:</strong>
+  <%= @assembleium.observacoes %>
+</p>
+
+<%= link_to 'Edit', edit_assembleium_path(@assembleium) %> |
+<%= link_to 'Back', assembleia_path %>
