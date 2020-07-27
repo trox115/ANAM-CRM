@@ -60,6 +60,10 @@ class AssembleiaController < ApplicationController
       format.json { head :no_content }
     end
   end
+def import
+  Assembleium.import(params[:file])
+  redirect_to assembleia_path, notice: "Assembleias importadas com sucesso"
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -6,7 +6,7 @@ class CreateAssembleia < ActiveRecord::Migration[6.0]
       t.string :nome_presidente
       t.string :email
       t.string :telefone
-      t.boolean :aderiu
+      t.boolean :aderiu, default:"false"
       t.date :data
       t.string :votacao
       t.string :observacoes
